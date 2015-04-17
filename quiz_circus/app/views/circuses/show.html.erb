@@ -1,1 +1,9 @@
+<%=link_to "Index", circuses_path%>
 
+<%@circus.entertainers.each do |entertainer|%>
+  <p><%= entertainer.name + entertainer.specialty %></p>
+<%end%>
+
+<p><%=@circus.name%></p>
+
+<%= image_tag @circus.image_url%>
